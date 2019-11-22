@@ -24,3 +24,6 @@ type vendor_sysfs_iio, fs_type, sysfs_type;
 
 # kcal
 type sysfs_kcal, fs_type, sysfs_type;
+
+# FPS
+type sysfs_fps, sysfs_type, fs_type;
