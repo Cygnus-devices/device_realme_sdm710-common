@@ -14,3 +14,5 @@ type vendor_thermal_prop, property_type;
 
 # Dirac
 type dirac_prop, property_type;
+
+type vendor_wifi_version, property_type;
