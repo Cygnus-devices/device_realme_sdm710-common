@@ -175,7 +175,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qti.chg_policy.sh \
