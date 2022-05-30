@@ -175,6 +175,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sdio.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
+    init.qcom.usb.sh \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qti.chg_policy.sh \
@@ -185,6 +186,7 @@ PRODUCT_PACKAGES += \
     init.oppo.reserve.rc \
     init.oppo.sensor.rc \
     init.oppo.vendor.fingerprint.rc \
+    init.qcom.usb.rc \
     init.oppo.vendor.motor.rc \
     init.qcom.factory.rc \
     init.qcom.rc \
