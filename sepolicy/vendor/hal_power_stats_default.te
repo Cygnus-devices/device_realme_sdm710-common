@@ -1,1 +1,4 @@
 get_prop(hal_power_stats_default, wifi_hal_prop)
+allow hal_power_stats_default vendor_sysfs_iio:dir { read open search };
+allow hal_power_stats_default vendor_sysfs_iio:file { read open };
+allow hal_power_stats_default vendor_sysfs_iio:lnk_file read;
