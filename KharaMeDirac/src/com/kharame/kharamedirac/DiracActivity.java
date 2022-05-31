@@ -14,13 +14,12 @@
  * limitations under the License.
  */
 
-package com.kharame.kharameparts.dirac;
+package com.kharame.kharamedirac;
 
 import android.os.Bundle;
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+import android.preference.PreferenceActivity;
 
-public class DiracActivity extends CollapsingToolbarBaseActivity {
+public class DiracActivity extends PreferenceActivity {
 
     private static final String TAG_DIRAC = "dirac";
 
@@ -28,7 +27,7 @@ public class DiracActivity extends CollapsingToolbarBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getFragmentManager().beginTransaction().replace(R.id.content_frame,
+        getFragmentManager().beginTransaction().replace(android.R.id.content,
                 new DiracSettingsFragment(), TAG_DIRAC).commit();
     }
 }

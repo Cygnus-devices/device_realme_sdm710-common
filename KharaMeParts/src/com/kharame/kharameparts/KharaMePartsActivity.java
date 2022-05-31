@@ -16,8 +16,7 @@
  */
 package com.kharame.kharameparts;
 
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -30,7 +29,7 @@ import android.view.MenuItem;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 
-public class KharaMePartsActivity extends CollapsingToolbarBaseActivity {
+public class KharaMePartsActivity extends Activity {
 
     private KharaMeParts mKharaMePartsFragment;
 
@@ -38,16 +37,29 @@ public class KharaMePartsActivity extends CollapsingToolbarBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        getActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Fragment fragment = getFragmentManager().findFragmentById(R.id.content_frame);
+        Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         if (fragment == null) {
             mKharaMePartsFragment = new KharaMeParts();
             getFragmentManager().beginTransaction()
-                .add(R.id.content_frame, mKharaMePartsFragment)
+                .add(android.R.id.content, mKharaMePartsFragment)
                 .commit();
         } else {
             mKharaMePartsFragment = (KharaMeParts) fragment;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+        case android.R.id.home:
+            finish();
+            return true;
+        default:
+            break;
+        }
+        return super.onOptionsItemSelected(item);
     }
  
 }

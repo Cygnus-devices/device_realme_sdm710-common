@@ -1,4 +1,4 @@
-package com.kharame.kharameparts.dirac;
+package com.kharame.kharamedirac;
 
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
